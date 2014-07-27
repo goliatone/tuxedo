@@ -5,7 +5,7 @@
   "time":"{{moment format="HH:mm:ss"}}",
   "created":"{{moment createdAt format="HH:mm:ss"}}",
   "fromunixtimestamp":"{{moment unixtimestamp format="dddd, DD MMMM YYYY HH:mm:ss ZZ"}}",
-  "langSupport":"{{moment createdAt lang="fi" format="dddd, DD MMMM YYYY HH:mm:ss ZZ"}}"
+  "langSupport":"{{moment createdAt  lang="fi" format="dddd, DD MMMM YYYY HH:mm:ss ZZ"}}"
 
 }
 {{/repeat}}

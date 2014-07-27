@@ -7,4 +7,4 @@
  */
 'use strict';
 
-exports.tuxedo = require('./lib/tuxedo');
+module.exports = require('./lib/tuxedo');

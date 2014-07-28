@@ -43,7 +43,7 @@ output:
 [{
   "_id":"9hwh38gcy6oap9y0l72f6hos11e63tcj",
   "_index":"1",
-  "name": "Nicholas O&#x27;Kon",
+  "name": "Nicholas Kon",
   "handle":"danny.mclaughlin",
   "address": "288 Johnson Junctions Suite 092",
   "phone":"340-344-1635 x582",

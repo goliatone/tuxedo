@@ -90,6 +90,11 @@ output:
 - TODO bin: Have default values
 - TODO bin: If no arguments and no default template.jtpl show help
 
+Review different option parsers:
+- [commander](https://github.com/visionmedia/commander.js)
+- [operetta](https://github.com/tricknik/node-operetta)
+- [nomnom](https://github.com/harthur/nomnom)
+
 ## Documentation
 _(Coming soon)_
 

@@ -10,6 +10,9 @@ options = {
     colors: true
 };
 
+//TODO: Have default values
+//TODO: If no arguments and no default template.jtpl show help
+//REVIEW: Should template be argv._ non hyphenated option?
 if (argv.o || argv.output) options.output = argv.output || argv.o;
 if (argv.c || argv.context) options.context = argv.context || argv.c;
 if (argv.t || argv.template) options.template = argv.template || argv.t;

@@ -1,0 +1,16 @@
+[
+{{#repeat 3}}
+{
+  "device": "someDeviceName",
+  "id": "{{repeatIndex}}",
+  "startTime": "{{moment format="hh:mm:ss"}}",
+  "visitDate": "{{moment createdAt format="hh:mm:ss"}}",
+  "visitor": {
+    "initials": "{{usState true}}",
+    "language": "{{randomElementOf languages}}",
+    "party": "{{randomElementOf parties}}",
+    "photoUrl": "{{avatar}}"
+  }
+}
+{{/repeat}}
+]

@@ -7,6 +7,17 @@ Faker goes hipster, gets a mustache and a suit.
 ## Getting Started
 Install the module with: `npm install tuxedo`
 
+You can also install `tuxedo` as a global package and use it in the terminal.
+
+`npm install tuxedo -g`
+
+```terminal
+tuxedo -h
+tuxedo 
+```
+
+## Examples
+
 ```javascript
 var tuxedo = require('tuxedo');
 
@@ -75,10 +86,11 @@ output:
 }]
 ```
 
-## Documentation
-_(Coming soon)_
+## TODO
+- TODO bin: Have default values
+- TODO bin: If no arguments and no default template.jtpl show help
 
-## Examples
+## Documentation
 _(Coming soon)_
 
 ## Contributing

@@ -16,7 +16,7 @@ if (argv.t || argv.template) options.template = argv.template || argv.t;
 if (argv.h || argv.help) options.help = true;
 
 
-var BANNER = 'Usage: tuxedo [options]\n\nIf called without options, `tuxedo` will listen to the current directory on port .';
+var BANNER = 'Usage: tuxedo [options]\n\n tuxedo -t template.jtpl -o output.json -c data.json';
 
 var SWITCHES = [
     ['-t', '--template', 'path to template file containing mustaches'],

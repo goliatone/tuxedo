@@ -9,8 +9,7 @@
   "phone":"{{phoneNumber}}",
   "company":"{{companyName}}",
   "img":"{{avatar}}",
-  "bio":
-  "{{sentences 3}}"
+  "bio": "{{sentences 3}}"
 }
 {{/repeat}}
 ]

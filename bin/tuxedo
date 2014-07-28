@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+'use strict';
+
+// Command Line Parameters
+var argv, options, colors, fs;
+fs = require('fs');
+colors = require('colors');
+argv = require('optimist').argv;
+options = {
+    colors: true
+};
+
+if (argv.o || argv.output) options.output = argv.output || argv.o;
+if (argv.c || argv.context) options.context = argv.context || argv.c;
+if (argv.t || argv.template) options.template = argv.template || argv.t;
+if (argv.h || argv.help) options.help = true;
+
+
+var BANNER = 'Usage: tuxedo [options]\n\nIf called without options, `tuxedo` will listen to the current directory on port .';
+
+var SWITCHES = [
+    ['-t', '--template', 'path to template file containing mustaches'],
+    ['-o', '--output', 'path to file containing generated data'],
+    ['-c', '--context', 'path to JSON context file passed to template engine'],
+    ['-h', '--help', 'show this help screen']
+];
+
+
+
+if (options.help === true) return usage();
+
+var fakeit = require('../index');
+
+fakeit.on('complete', function(result) {
+    if (!options.output) return printLine('Output is:\n'.yellow + result.green + '\n');
+    fs.writeFile(options.output, result, function(err) {
+        if (err) return console.log(err);
+        printLine(result.green + '\n');
+    });
+});
+
+fakeit.on('error', function(result) {
+    printLine('Error:\n'.yellow + result.red + '\n');
+});
+
+var context = {};
+if(options.context) {
+	context.data = fs.readFileSync(options.context, 'utf8');
+	context.data = JSON.parse(context.data);
+}
+
+fakeit.fromFile(options.template, context);
+
+
+function usage() {
+    var lines, spaces, i, len, switchLength, currSwitch, spaces, shortFlag, longFlag;
+
+    lines = [];
+    lines.unshift('' + BANNER + '\n');
+
+    for (i = 0, len = SWITCHES.length; i < len; i++) {
+        currSwitch = SWITCHES[i];
+        spaces = Array(16 - currSwitch[1].length).join(' ');
+
+        if (currSwitch[0] === '') {
+            shortFlag = '    ';
+        } else {
+            shortFlag = currSwitch[0] + ', ';
+        }
+
+        longFlag = currSwitch[1];
+
+        lines.push('   ' + shortFlag + longFlag + spaces + currSwitch[2]);
+    }
+
+    return printLine('\n' + (lines.join('\n')) + '\n');
+};
+
+function printLine(line) {
+
+    // Strip All Colors
+    if (!options.colors) {
+        return process.stdout.write(line.stripColors + '\n');
+    } else {
+        return process.stdout.write(line + '\n');
+    }
+
+};

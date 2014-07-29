@@ -86,9 +86,10 @@ output:
 }]
 ```
 
-## TODO
-- TODO bin: Have default values
+## TODOs
+- TODO ~~bin: Have default values~~
 - TODO bin: If no arguments and no default template.jtpl show help
+- TODO `repeat` take glue argument, so we can ignore it for CVS templates
 
 Review different option parsers:
 - [commander](https://github.com/visionmedia/commander.js)

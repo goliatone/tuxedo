@@ -1,16 +1,18 @@
 #!/usr/bin/env node
+
 'use strict';
 
 // Command Line Parameters
 var argv, options, colors, fs;
 fs = require('fs');
 colors = require('colors');
-argv = require('optimist').usage('Usage: tuxedo [options]\n\n tuxedo -t template.jtpl -o output.json -c data.json')
+argv = require('optimist')
+	.usage('Usage: tuxedo [options]\n\n tuxedo -t template.jtpl -o output.json -c data.json')
     .demand('t')
     .alias('t', 'template')
     .alias('o', 'output')
     .alias('c', 'context')
-    .default('c', false)
+    .default ('c', false)
     .describe('t', 'path to template file containing mustaches')
     .describe('o', 'path to file containing generated data')
     .describe('c', 'path to JSON context file passed to template engine')
@@ -34,9 +36,9 @@ fakeit.on('error', function(result) {
 });
 
 var context = {};
-if(argv.context) {
-	context.data = fs.readFileSync(argv.context, 'utf8');
-	context.data = JSON.parse(context.data);
+if (argv.context) {
+    context.data = fs.readFileSync(argv.context, 'utf8');
+    context.data = JSON.parse(context.data);
 }
 
 fakeit.fromFile(argv.template, context);

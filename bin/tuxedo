@@ -12,7 +12,9 @@ argv = require('optimist')
     .alias('t', 'template')
     .alias('o', 'output')
     .alias('c', 'context')
+    alias('p', 'pigments')
     .default ('c', false)
+    .default ('p', false)
     .describe('t', 'path to template file containing mustaches')
     .describe('o', 'path to file containing generated data')
     .describe('c', 'path to JSON context file passed to template engine')
@@ -24,7 +26,7 @@ if (argv.help) return argv.showHelp(printLine);
 var fakeit = require('../index');
 
 fakeit.on('complete', function(result) {
-    if (!argv.output) return printLine('Output is:\n'.yellow + result.green + '\n');
+    if (!argv.output) return printLine(result.green + '\n');
     fs.writeFile(argv.output, result, function(err) {
         if (err) return console.log(err);
         printLine(result.green + '\n');
@@ -45,5 +47,6 @@ fakeit.fromFile(argv.template, context);
 
 
 function printLine(line) {
-    return process.stdout.write(line + '\n');
+	if(argv.pigments) return process.stdout.write(line + '\n');
+	return process.stdout.write(line.stripColors + '\n');
 }

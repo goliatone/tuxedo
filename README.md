@@ -13,7 +13,7 @@ You can also install `tuxedo` as a global package and use it in the terminal.
 
 ```terminal
 tuxedo -h
-tuxedo 
+tuxedo -t template.jtpl -o output.json -c data.json 
 ```
 
 ## Examples

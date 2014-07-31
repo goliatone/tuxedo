@@ -92,11 +92,18 @@ output:
 - TODO `repeat` take glue argument, so we can ignore it for CVS templates
 - TODO add country generator.
 
+**TEMPLATES**
+Consider templates taking an option hash instead of positional arguments.
+Instead of this:
 
-Review different option parsers:
-- [commander](https://github.com/visionmedia/commander.js)
-- [operetta](https://github.com/tricknik/node-operetta)
-- [nomnom](https://github.com/harthur/nomnom)
+```
+"bio": "{{sentences 3 '.<br/>'}}"
+```
+
+```
+"bio": "{{sentences 3 glue='.<br/>'}}"
+```
+
 
 ## Documentation
 _(Coming soon)_

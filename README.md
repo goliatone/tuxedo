@@ -91,6 +91,7 @@ output:
 - TODO bin: If no arguments and no default template.jtpl show help
 - TODO `repeat` take glue argument, so we can ignore it for CVS templates
 - TODO add country generator.
+- TODO replace `helpers.repeat` with `handlebars-helpers-repeat`
 
 **TEMPLATES**
 Consider templates taking an option hash instead of positional arguments.

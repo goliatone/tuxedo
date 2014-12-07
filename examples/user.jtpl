@@ -6,6 +6,7 @@
   "name": "{{findName}}",
   "handle":"{{userName}}",
   "address": "{{streetAddress}}",
+  "city":"{{city}}",
   "phone":"{{phoneNumber}}",
   "company":"{{companyName}}",
   "img":"{{avatar}}",

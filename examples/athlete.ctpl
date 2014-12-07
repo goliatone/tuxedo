@@ -1,0 +1,4 @@
+"__id","athlete","age","country","year","closing_ceremony_date","sport","gold_medals","silver_medals","bronze_medals","total_medals"
+{{#repeat 3}}
+"{{repeatIndex}}","{{findName}}","{{state}}", "{{moment format="YY"}}", "{{moment format="hh:mm:ss"}}", "{{zipCode}}"
+{{/repeat}}

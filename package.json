@@ -1,6 +1,6 @@
 {
   "name": "tuxedo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Faker gets a suit and a mustache",
   "engines": {
     "node": ">= 0.10.0"
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "handlebars-helper-moment": "^0.2.0",
-    "faker":"git://github.com/goliatone/Faker.js.git#develop",
+    "faker": "git://github.com/goliatone/Faker.js.git#develop",
     "handlebars": "^2.0.0-alpha.4",
     "optimist": "0.3.x",
     "colors": "0.6.x"
@@ -45,7 +45,7 @@
     "istanbul": "0.1.25",
     "mocha": "1.7.4",
     "node-minify": "*",
-    "optimist" : "0.3.5",
+    "optimist": "0.3.5",
     "sinon": "1.4.2"
   }
 }

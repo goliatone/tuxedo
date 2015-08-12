@@ -1,6 +1,6 @@
 {
   "name": "tuxedo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Faker gets a suit and a mustache",
   "engines": {
     "node": ">= 0.10.0"

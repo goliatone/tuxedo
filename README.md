@@ -35,7 +35,7 @@ tuxedo.fromFile(__dirname + '/users.jtpl');
 {{#repeat 13}}
 {
   "_id":"{{uid 32}}",
-  "_index":"{{autoIncrement}}",
+  "_index":{{autoIncrement}},
   "name": "{{findName}}",
   "handle":"{{userName}}",
   "address": "{{streetAddress}}",
@@ -53,7 +53,7 @@ output:
 ```json
 [{
   "_id":"9hwh38gcy6oap9y0l72f6hos11e63tcj",
-  "_index":"1",
+  "_index":1,
   "name": "Nicholas Kon",
   "handle":"danny.mclaughlin",
   "address": "288 Johnson Junctions Suite 092",
@@ -64,7 +64,7 @@ output:
 },
 {
   "_id":"og1cj2lkjidpo76hek94jy6oy1t487bh",
-  "_index":"2",
+  "_index":2,
   "name": "Olen Cormier",
   "handle":"reagan",
   "address": "85346 Stamm Ford Apt. 355",
@@ -75,7 +75,7 @@ output:
 },
 {
   "_id":"aftmqt4ec65r8kqast80fukgnj4vgp4y",
-  "_index":"3",
+  "_index":3,
   "name": "Miss Camryn Wolf",
   "handle":"chyna",
   "address": "0704 Alden Roads Suite 338",

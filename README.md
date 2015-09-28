@@ -13,7 +13,7 @@ You can also install `tuxedo` as a global package and use it in the terminal.
 
 ```terminal
 tuxedo -h
-tuxedo -t template.jtpl -o output.json -c data.json 
+tuxedo -t template.jtpl -o output.json -c data.json
 ```
 
 ## Examples
@@ -87,6 +87,7 @@ output:
 ```
 
 ## TODOs
+- TODO Add solver to reference props in json structures
 - TODO ~~bin: Have default values~~
 - TODO bin: If no arguments and no default template.jtpl show help
 - TODO `repeat` take glue argument, so we can ignore it for CVS templates
@@ -122,4 +123,3 @@ _(Nothing yet)_
 ## License
 Copyright (c) 2014 goliatone  
 Licensed under the MIT license.
-
